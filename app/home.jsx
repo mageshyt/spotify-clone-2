@@ -7,6 +7,7 @@ import Header from "../components/Home Page/Header/Header";
 import PlayList from "../components/Home Page/Playlists/PlayList";
 import MediumCard from "../components/Home Page/Playlists/MediumCard";
 import Feed from "../components/Home Page/Feed/Feed";
+import { Stack } from "expo-router";
 
 const HomeScreen = () => {
   const navigation = useNavigation();

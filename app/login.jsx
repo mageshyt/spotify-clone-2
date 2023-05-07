@@ -5,7 +5,7 @@ import SigInComponent from "../components/Login Page/SigIn.component";
 import FaceBook from "../assets/images/facebook.png";
 import Google from "../assets/images/google.png";
 import Apple from "../assets/images/apple.png";
-import { useNavigation } from "expo-router";
+import { Stack, useNavigation } from "expo-router";
 import { ResponseType, useAuthRequest } from "expo-auth-session";
 import { SpotifyContext } from "../context/SpotifyContext";
 import spotifyApi from "../lib/spotify";

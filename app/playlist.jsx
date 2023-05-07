@@ -19,6 +19,7 @@ import {
 import { useSongs } from "../hooks/FetchSongs";
 import ActiveSong from "../components/playlist songs/ActiveSong";
 import * as Animatable from "react-native-animatable";
+import { Stack } from "expo-router";
 
 const PlaylistScreen = () => {
   const {

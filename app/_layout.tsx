@@ -46,9 +46,9 @@ function RootLayoutNav() {
   return (
     <>
       <SpotifyProvider>
-        <Stack>
-          <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack initialRouteName="login">
           <Stack.Screen name="login" options={{ headerShown: false }} />
+          <Stack.Screen name="index" options={{ headerShown: false }} />
 
           <Stack.Screen
             name="home"

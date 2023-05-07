@@ -17,6 +17,7 @@ import { SpotifyContext } from "../context/SpotifyContext";
 import { ShareIcon } from "react-native-heroicons/outline";
 import { getLyrics } from "../hooks/UseSongLyrics";
 import SongLyrics from "../components/Song Page/SongLyrics";
+import { Stack } from "expo-router";
 const SongScreen = () => {
   const {
     params: { song },
@@ -91,6 +92,7 @@ const SongScreen = () => {
           color="white"
           size={30}
         />
+
         <Text className="text-white text-center flex-1 text-sm">
           {song?.album?.name}
         </Text>
