@@ -14,7 +14,6 @@ const index = () => {
   const router = useRouter();
   const { token } = useContext(SpotifyContext);
 
-
   // useEffect(() => {
   //   let isCalled = false;
   //   const setTokenFromLocalStorage = async () => {
