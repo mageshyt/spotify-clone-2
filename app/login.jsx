@@ -21,8 +21,8 @@ const login = () => {
   const [request, response, promptAsync] = useAuthRequest(
     {
       responseType: ResponseType.Token,
-      clientId: "06c8d1ff40d54085ad2e85533f513e47",
-      clientSecret: "14f3b0095a6e43bf8d0f8e622946fe68",
+      clientId: process.env.APP_CLINT_ID,
+      clientSecret: process.env.APP_CLINT_SECRET,
       scopes: [
         "user-read-currently-playing",
         "user-read-recently-played",

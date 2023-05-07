@@ -1,10 +1,9 @@
 import {
   View,
-  Text,
   Image,
-  SafeAreaView,
   ScrollView,
   TouchableOpacity,
+  FlatList,
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
@@ -41,10 +40,13 @@ const PlaylistScreen = () => {
       >
         {/* back button */}
         <TouchableOpacity
-          onPress={() => navigation.goBack()}
-          className="absolute left-0 ml-4 mt-4"
+          onPress={() => {
+            navigation.goBack();
+            console.log("back");
+          }}
+          className="absolute left-0 top-2 ml-4 mt-4"
         >
-          <ArrowLeftIcon color="white" size={25} />
+          <ArrowLeftIcon color="white" size={26} />
         </TouchableOpacity>
         {/* top session with image  */}
         <Animatable.View
@@ -60,24 +62,21 @@ const PlaylistScreen = () => {
         </Animatable.View>
         {/* split */}
         <View className=" border-b mt-4  border-white w-[90%] " />
-        <ScrollView
+
+        <FlatList
           showsVerticalScrollIndicator={false}
           className="w-full   p-4"
-        >
-          <View className="pb-[80px]">
-            {songs?.map((item, idx) => {
-              return (
-                //
-                <SongCard
-                  key={idx}
-                  delay={idx * 100 + 500}
-                  setplaying={setplaying}
-                  track={item.track}
-                />
-              );
-            })}
-          </View>
-        </ScrollView>
+          data={songs}
+          renderItem={({ item, index }) => (
+            <SongCard
+              track={item.track}
+              setplaying={setplaying}
+              delay={index * 100 + 500}
+              key={index}
+            />
+          )}
+          keyExtractor={(item) => item.id}
+        />
       </LinearGradient>
       <View className="px-5 items-center ">
         {playing && <ActiveSong playing={playing} />}

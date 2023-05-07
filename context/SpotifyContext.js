@@ -5,7 +5,7 @@ export const SpotifyContext = createContext({});
 
 export const SpotifyProvider = ({ children }) => {
   const [token, setToken] = useState(
-    "BQA9KRfzOu8MUD2Gy27dCU-1AN4oLjQI8yFfQCwAsJ3zPD7fhGXGRsqLwjUQTLnwZuq6MGMss0Oaadrext5O1WD4zUUxJ6b2h5ApjNGw19rzTPGafpryltajM8MiXwSkEVb18ZR38kulGIYv58c1MVC4us3xuYpHC_W9aKI-KJz3wJsje5Rzg99YrLbSPcozz2vi6WXHZWAUjI8UMexDsHBmU2S09skbtf3BM9zEwA"
+    "BQD3Jdhovs-ckojX1Y4RcJbHP04hLWezDKBkxuC8oUDYMv-hqf75YBPH0CNUgLoC3Uj7VZr-JiEmZIjEtjMccfpWM_0gNf86LQFom5t1btEkgZ8V84FSbFuFSkt2Dhx-1g8FFICLIVFujdeoL3iYtOTmWCJ4XaRBesYQEtIcwZqJJdP5e0d6c4SJL6b5nrF1zMEXE-wSACHcDajo7zhVpHNQ04ag41PPaLNN7g2CUA"
   );
   const [playList, setPlaylist] = useState(null);
   const [category, setCategory] = useState(null);

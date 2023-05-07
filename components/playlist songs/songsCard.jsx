@@ -4,13 +4,20 @@ import * as Animatable from "react-native-animatable";
 import { EllipsisHorizontalIcon } from "react-native-heroicons/solid";
 
 const SongCard = ({ track, setplaying, delay }) => {
-  console.log("track", track.album.images[0].url);
+  if (!track)
+    return (
+      <View>
+        <Text>loading</Text>
+      </View>
+    );
+
+
   return (
     <Animatable.View
       iterationCount={1}
       animation="fadeInRight"
       className="flex-row items-center  pb-8"
-      delay={delay}
+      delay={delay || 0}
     >
       {/* details */}
       <TouchableOpacity
