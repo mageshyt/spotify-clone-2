@@ -7,7 +7,7 @@ import * as Animatable from "react-native-animatable";
 const SongInfo = ({ song }) => {
   const navigation = useNavigation();
   return (
-    <View>
+    <View className="relative">
       <View className=" flex-row items-center  absolute top-14  ml-4 ">
         <ChevronDownIcon
           onPress={() => navigation.goBack()}
